@@ -3,10 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clculator</title>
+    <link rel="stylesheet" type="text/css" href="Calc.css">
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .mdiv{
+            height: 100vh;
+            width: 100%;
+            /*background-color: wheat;*/
+            background-image:url(https://scitechdaily.com/images/Algebra-Mathematics.gif) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            
+            position: fixed;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .calc{
+            width: 300px;
+            height: 470px;
+            background-color:black;
+            border-radius: 50px;
+           
+
+        }
+        .op{
+            text-align: right;
+            text-size-adjust: 50px;
+            height: 100px;
+            width: 300px;
+            background-color:black;
+             border-top-right-radius: 20px;
+             border-top-left-radius:20px ;
+             font-size: 30px;
+             color: white;
+             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        .multi{
+            
+            background-color: gold;
+            font-size: larger;
+        }
+        .ac{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .c{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .div{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .mod{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: goldenrod;
+            font-size: larger;
+        }
+        .se{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .ei{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .ni{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .multi{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: gold;
+            font-size: larger;
+        }
+        .fo{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .fi{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .si{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .sub{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: gold;
+            font-size: larger;
+        }
+        .th{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .on{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .tw{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .plus{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: gold;
+            font-size: larger;
+        }
+        
+        .bu{
+            background-color: gray;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            font-size: larger;
+        }
+        .ze{
+            background-color: gray;
+            height: 90px;
+            width: 90px;
+            border-radius: 60px;
+            margin-left: 30px;
+            font-size: larger;
+        }
+        .eq{
+            background-color:grey;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: gold;
+            margin-left: 20px;
+            font-size: larger;
+        }
+       .para{
+        color: whitesmoke;
+        margin-left: 30px;
+        font-size: large;
+        
+       }
+
+    </style>
 </head>
 <body>
-    <h1 style="color:brown;" >My name is Akshada</h1>
-    <p>WebTech WebPage Github</p>
+    
+    <div class="mdiv">
+        <div class="calc">
+            <form>
+                <div>
+                <input type="text" name="op" class="op">
+             </div>
+             <div>
+                <input type="button" name="Ac" value="AC" onclick="op.value=' '" class="ac ">
+                <input type="button" name="C" value="C" onclick="op.value=Math.floor(op.value/10)" class="c ">
+                <input type="button" name="mod" value="%" onclick="op.value+='%'" class="div">
+                <input type="button" name="Operator" value="/" onclick="op.value+='/'" class="mod">
+             </div>
+                  <div>
+                    <input type="button" name="7" value="7" onclick="op.value+='7'" class="se">
+                    <input type="button" name="8" value="8" onclick="op.value+='8' " class="ei">
+                    <input type="button" name="9" value="9" onclick="op.value+='9'" class="ni">
+                    <input type="button" name="Operator" value="X" onclick="op.value+='*'" class="multi">
+                </div>
+                <div>
+                    <input type="button" name="4" value="4" onclick="op.value+='4'" class="fo">
+                    <input type="button" name="5" value="5" onclick="op.value+='5' " class="fi">
+                    <input type="button" name="6" value="6" onclick="op.value+='6'" class="si">
+                    <input type="button" name="Operator" value="-" onclick="op.value+='-'" class="sub">
+                </div>
+                <div>
+                    <input type="button" name="1" value="1" onclick="op.value+='1'" class="on">
+                    <input type="button" name="2" value="2" onclick="op.value+='2' " class="tw">
+                    <input type="button" name="3" value="3" onclick="op.value+='3'" class="th">
+                    <input type="button" name="Operator" value="+" onclick="op.value+='+'" class="plus">
+                </div>
+                <div>
+                    <input type="button" name="0" value="0" onclick="op.value+='0'" class="ze">
+                    
+                    <input type="button" name="Operator" value="." onclick="op.value+='.'" class="bu">
+                    <input type="button" name="Operator" value="=" onclick="op.value=eval(op.value)" class="eq">
+                </div>
+                <div class="para">
+                    <p>CONFUSION HE CONFUSION HAI,SOLUTION KA PATA NAHI....!</p>
+                </div>
+               
+            </form>
+        </div>
+    </div>
 </body>
 </html>
